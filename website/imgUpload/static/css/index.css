@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #282a36;
+}
+
+.title_container,
+.file_and_button_container,
+.card_container,
+.card,
+.disease_name_and_accuracy_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2%;
+}
+
+.title_container h1 {
+    font-size: 70px;
+    color: #f8f8f2;
+}
+
+.card_container {
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 20px;
+    margin: 0 10%;
+}
+
+.card {
+    height: 300px;
+    width: 100%;
+    gap: 4%;
+    background-color: #44475a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card,
+.cure_the_disease_container,
+.card img {
+    box-shadow: 2px 2px 10px #3f424d;
+}
+
+.card img {
+    border-radius: 10px;
+    border: 4px solid #282a36;
+}
+
+.data_container {
+    height: 100%;
+    width: 100%;
+}
+
+.disease_name_and_accuracy_container {
+    justify-content: space-evenly;
+}
+
+.disease_name_and_accuracy_container h2 {
+    font-size: 30px;
+    color: #f8f8f2;
+}
+
+.cure_the_disease_container {
+    display: flex;
+    justify-content: center;
+    height: 70%;
+    overflow: scroll;
+    overflow-x: hidden;
+    color: #f8f8f2;
+    font-size: 25px;
+    text-align: justify;
+    text-indent: 13%;
+    padding: 5px;
+    background-color: #282a36;
+    border-radius: 10px;
+}
+
+.cure_the_disease_container::-webkit-scrollbar {
+    display: none;
+}
+
+input {
+    font-size: 20px;
+}
+
+
+@media (max-width: 1250px) {
+    .disease_name_and_accuracy_container h2 {
+        font-size: 25px;
+    }
+
+    .card_container {
+        margin: 0 5%;
+    }
+
+    .cure_the_disease_container {
+        font-size: 20px;
+    }
+
+    .img_container {
+        height: 180px;
+        width: 220px;
+    }
+
+    .img_container img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .title_container h1 {
+        font-size: 50px;
+    }
+
+    input {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1045px) {
+    .disease_name_and_accuracy_container h2 {
+        font-size: 20px;
+    }
+
+    .card_container {
+        margin: 0 2%;
+    }
+
+    .cure_the_disease_container {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 638px) {
+    .disease_name_and_accuracy_container h2 {
+        font-size: 15px;
+    }
+
+    .card_container {
+        margin: 0 1%;
+    }
+
+    .img_container {
+        height: 150px;
+        width: 190px;
+    }
+
+    .img_container img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .title_container h1 {
+        font-size: 40px;
+    }
+
+    input {
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 515px) {
+    .disease_name_and_accuracy_container h2 {
+        font-size: 10px;
+    }
+
+    .card_container {
+        margin: 0 .5%;
+    }
+}
+
+@media (max-width: 400px) {
+    .disease_name_and_accuracy_container h2 {
+        font-size: 9px;
+    }
+
+    .card_container {
+        margin: 0 .1%;
+    }
+}

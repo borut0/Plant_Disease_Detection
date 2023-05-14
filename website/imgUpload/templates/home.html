@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home page</title>
+    <link rel="stylesheet" href="/static/css/home.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="container">
+      <div id="title_container">
+        <h1> Plant Disease Detection </h1>
+      </div>
+      <div class="card_container">
+        {% for i,j in leaf_name_nd_images %}
+          <div class="card">
+            <a href="plant/{{j}}">
+              <div class="img_con">
+                <img src="{{i}}" alt="">
+              </div>
+            </a>
+            <div class="content">
+              <div class="details">
+                <h2>{{j | title}}</h2>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/index.css">
+  </head>
+  <body>
+    <div class="title_container">
+      <h1>{{pk}}</h1>
+    </div>
+<div class="file_and_button_container">
+      <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          <input type="file" multiple name="imgs" required/>
+          <button type="submit">Submit</button>
+      </form>
+    </div>
+    <!--    <div style="color: white;display:flex;align-items:center;justify-content: center;">
+      <h3>Please Check Your File</h3>
+</div> -->
+    <div class="card_container">
+      {% for acc,label,img,cure in data %}
+      <div class="card">
+        <div class="img_container">
+          <img src="{{img.imgs.url}}" alt="">
+        </div>
+        <div class="data_container">
+          <div class="disease_name_and_accuracy_container">
+            <div class="disease_name_container">
+              <h2>Disease : {{label}}</h2>
+            </div>
+            <div class="accuracy_container">
+              <h2>Accuracy : {{acc}}</h2>
+            </div>
+          </div>
+          <div class="cure_the_disease_container">
+            <p>{{cure}}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+</body>
+</html>
