@@ -69,7 +69,12 @@ after couple of hours we got our model
 ```bash
 mkdir -p ../../website/models
 cp best_model.h5 ../../website/models
+cd ../../webite
+```
 
+Then Run the following command 
+```bash
+python manage.py runserver
 ```
 
 
